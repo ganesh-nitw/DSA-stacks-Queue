@@ -48,16 +48,14 @@ void dequeue()
 
 void Display()
 {
-    if(f == -1)
-    {
-        cout << "Queue is empty\n";
-        return;
-    }
-
-    for(int i = f; i != (r + 1) % n; i = (i + 1) % n)
-    {
-        cout << q[i] << " ";
-    }
+    int i=front;
+    while(i!=rear)
+    { 
+      cout<<q[i]<<endl;
+      i=(i+1)%n; 
+    } 
+    if(rear!=-1)
+    { cout<<q[rear]; }
 }
 
 int main()
